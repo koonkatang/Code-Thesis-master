@@ -48,6 +48,7 @@ class MainPage():
         width_window = window.winfo_screenwidth()-10
         height_window = window.winfo_screenheight()-80
         window.geometry("{0}x{1}+0+0".format(width_window, height_window))
+        ctk.deactivate_automatic_dpi_awareness()
         window.title('Test Main Page')
         window.grid_columnconfigure([0,1,2], weight=1)
         window.grid_rowconfigure([0,1,2], weight=1)

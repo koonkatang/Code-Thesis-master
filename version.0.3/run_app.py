@@ -2,6 +2,9 @@ import main_page as mp
 import datetime as dt
 from tkinter import ttk
 import customtkinter as ctk
+ctk.set_appearance_mode('System')
+ctk.set_default_color_theme('dark-blue')
+ctk.deactivate_automatic_dpi_awareness()
 
 class FaceRecognitionApp:
     #Go to main page when submit button is clicked
@@ -10,12 +13,14 @@ class FaceRecognitionApp:
         mp.MainPage(course_id)
 
     def runMain(self):
-        ctk.set_appearance_mode('dark')
-        ctk.set_default_color_theme('dark-blue')
+        # ctk.set_appearance_mode('dark')
+        # ctk.set_default_color_theme('dark-blue')
+        # ctk.deactivate_automatic_dpi_awareness()
         window = ctk.CTk()
         width_window = window.winfo_screenwidth()-10
         height_window = window.winfo_screenheight()-80
         window.geometry("{0}x{1}+0+0".format(width_window, height_window))
+        
         window.title('Test Application GUI Window Face Recognition')
         window.grid_columnconfigure(1, weight=1)
         window.grid_rowconfigure([0,1,2,3,4], weight=1)
